@@ -1,6 +1,6 @@
 {
   "name": "brain-games-serg",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "In the 'Brain Games' you have to find out a pattern in a numerical sequence. Type a number and check if you are right! The first project in Frontend course by Hexlet.",
   "keywords": [
     "hexlet",
@@ -10,6 +10,7 @@
   ],
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
+    "eslint": "eslint",
     "babel-node": "babel-node",
     "build": "NODE_ENV=production babel src --out-dir dist --source-maps inline",
     "prepublishOnly": "npm run build"
@@ -19,8 +20,13 @@
   "devDependencies": {
     "babel-cli": "^6.26.0",
     "babel-core": "^6.26.3",
+    "babel-eslint": "^8.2.6",
     "babel-preset-env": "^1.7.0",
-    "babel-preset-stage-0": "^6.24.1"
+    "babel-preset-stage-0": "^6.24.1",
+    "eslint": "^5.4.0",
+    "eslint-config-airbnb-base": "^13.1.0",
+    "eslint-plugin-babel": "^5.1.0",
+    "eslint-plugin-import": "^2.14.0"
   },
   "bin": {
     "brain-games": "dist/bin/brain-games.js"
