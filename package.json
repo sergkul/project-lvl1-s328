@@ -1,0 +1,26 @@
+{
+  "name": "brain-games-serg",
+  "version": "1.0.0",
+  "description": "In the 'Brain Games' you have to find out a pattern in a numerical sequence. Type a number and check if you are right! The first project in Frontend course by Hexlet.",
+  "keywords": ["hexlet", "brain-games", "numerical-sequence", "ngd"],
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "babel-node": "babel-node",
+    "build": "NODE_ENV=production babel src --out-dir dist --source-maps inline",
+    "prepublishOnly": "npm run build"
+  },
+  "author": "Sergey Kulakov",
+  "license": "ISC",
+  "devDependencies": {
+    "babel-cli": "^6.26.0",
+    "babel-core": "^6.26.3",
+    "babel-preset-env": "^1.7.0",
+    "babel-preset-stage-0": "^6.24.1"
+  },
+  "bin": {
+    "brain-games": "dist/bin/brain-games.js"
+  },
+  "files": [
+    "dist"
+  ]
+}
