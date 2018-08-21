@@ -1,8 +1,13 @@
 {
   "name": "brain-games-serg",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "In the 'Brain Games' you have to find out a pattern in a numerical sequence. Type a number and check if you are right! The first project in Frontend course by Hexlet.",
-  "keywords": ["hexlet", "brain-games", "numerical-sequence", "ngd"],
+  "keywords": [
+    "hexlet",
+    "brain-games",
+    "numerical-sequence",
+    "ngd"
+  ],
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "babel-node": "babel-node",
@@ -22,5 +27,8 @@
   },
   "files": [
     "dist"
-  ]
+  ],
+  "dependencies": {
+    "readline-sync": "^1.4.9"
+  }
 }
