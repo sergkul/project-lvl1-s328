@@ -1,16 +1,15 @@
 import { cons } from 'hexlet-pairs';
+import randomNumber from '../utils';
 import game from '..';
 
-const rules = 'What is the result of the expression?.\n';
-
-const randomNumber = limit => Math.floor(Math.random() * limit);
+const rules = 'What is the result of the expression?';
 
 const operationsAmount = 3;
 
 const setQuestionAndAnswer = () => {
-  const operationTypeId = randomNumber(operationsAmount);
-  const num1 = randomNumber(100);
-  const num2 = randomNumber(100);
+  const operationTypeId = randomNumber(0, operationsAmount);
+  const num1 = randomNumber(1, 100);
+  const num2 = randomNumber(1, 100);
   let question = 0;
   let rightAnswer = '';
 
