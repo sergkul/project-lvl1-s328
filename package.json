@@ -1,6 +1,6 @@
 {
   "name": "brain-games-serg",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "In the 'Brain Games' you have to find out a pattern in a numerical sequence. Type a number and check if you are right! The first project in Frontend course by Hexlet.",
   "keywords": [
     "hexlet",
@@ -30,7 +30,8 @@
     "eslint-plugin-import": "^2.14.0"
   },
   "bin": {
-    "brain-games": "dist/bin/brain-games.js"
+    "brain-games": "dist/bin/brain-games.js",
+    "brain-even": "dist/bin/brain-even.js"
   },
   "files": [
     "dist"
