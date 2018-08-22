@@ -1,22 +1,20 @@
 import readlineSync from 'readline-sync';
-
-const makeNumber = () => Math.floor(Math.random() * 100 + 1);
-
-const isEven = n => n % 2 === 0;
+import { car, cdr } from 'hexlet-pairs';
 
 const rounds = 3;
 
-const playRounds = () => {
+const playRounds = (getQuestionAndAnswer) => {
   for (let i = 1; i <= rounds; i += 1) {
-    const question = makeNumber();
-    const rightAnswer = isEven(question) ? 'yes' : 'no';
+    const questionAndAnswer = getQuestionAndAnswer();
+    const question = car(questionAndAnswer);
 
     console.log(`Question: ${question}`);
 
+    const trueAnswer = String(cdr(questionAndAnswer));
     const answer = readlineSync.question('Your answer: ');
 
-    if (answer !== rightAnswer) {
-      console.log(`${answer} is wrong answer ;(. Correct answer was ${rightAnswer}.`);
+    if (answer !== trueAnswer) {
+      console.log(`${answer} is wrong answer ;(. Correct answer was ${trueAnswer}.`);
       return false;
     }
 
@@ -26,14 +24,14 @@ const playRounds = () => {
   return true;
 };
 
-const game = () => {
+const game = (rules, getQuestionAndAnswer) => {
   console.log('Welcome to the Brain Games!');
-  console.log('Answer "yes" if number even otherwise answer "no".\n');
+  console.log(rules);
 
   const username = readlineSync.question('May I have your name? ');
   console.log(`Hello, ${username}!\n`);
 
-  const isWin = playRounds();
+  const isWin = playRounds(getQuestionAndAnswer);
 
   if (isWin) {
     console.log(`Congratulations, ${username}!`);
