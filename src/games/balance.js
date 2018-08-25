@@ -4,77 +4,46 @@ import game from '..';
 
 const rules = 'Balance the given number.';
 
-const getMinDigitIndex = (str) => {
-  let minNumberIndex = 0;
-  let minNumber = str[minNumberIndex];
+const concatString = (num, amount) => {
+  let result = '';
 
-  for (let i = 1; i < str.length; i += 1) {
-    if (str[i] < minNumber) {
-      minNumberIndex = i;
-      minNumber = str[i];
-    }
+  for (let i = 0; i < amount; i += 1) {
+    result += String(num);
   }
 
-  return minNumberIndex;
+  return result;
 };
 
-const getMaxDigitIndex = (str) => {
-  let maxNumberIndex = 0;
-  let maxNumber = str[maxNumberIndex];
-
-  for (let i = 1; i < str.length; i += 1) {
-    if (str[i] > maxNumber) {
-      maxNumberIndex = i;
-      maxNumber = str[i];
-    }
-  }
-
-  return maxNumberIndex;
-};
-
-const getBalancedNumber = (str) => {
-  const iter = (current, accumulator) => {
-    if (current.length === 0) return accumulator;
-
-    let currentString = '';
-
-    const minDigitIndex = getMinDigitIndex(current);
-    const minDigit = current[minDigitIndex];
-
-    for (let i = 0; i < current.length; i += 1) {
-      if (i !== minDigitIndex) currentString += current[i];
-    }
-
-    return iter(currentString, `${accumulator}${minDigit}`);
-  };
-
-  return iter(str, '');
-};
-
-const getPreBalancedNumber = (str) => {
+const getBalancedNumber = (number) => {
+  const str = String(number);
+  const amountOfDigits = str.length;
   let balancedString = '';
-  const maxDigitIndex = getMaxDigitIndex(str);
-  const minDigitIndex = getMinDigitIndex(str);
+  let sumOfDugits = 0;
 
-  if (str[maxDigitIndex] - str[minDigitIndex] <= 1) return str;
-
-  for (let i = 0; i < str.length; i += 1) {
-    if (i === minDigitIndex) {
-      balancedString += String(Number(str[minDigitIndex]) + 1);
-    } else if (i === maxDigitIndex) {
-      balancedString += String(Number(str[maxDigitIndex]) - 1);
-    } else {
-      balancedString += str[i];
-    }
+  for (let i = 0; i < amountOfDigits; i += 1) {
+    sumOfDugits += Number(str[i]);
   }
 
-  return getPreBalancedNumber(balancedString);
+  const oneDigit = Math.floor(sumOfDugits / amountOfDigits);
+  const remainder = sumOfDugits % amountOfDigits;
+
+  if (remainder === 0) {
+    balancedString = concatString(oneDigit, amountOfDigits);
+  } else {
+    const otherDigit = oneDigit + 1;
+    const amountOfOneDigit = amountOfDigits - remainder;
+
+    balancedString = concatString(oneDigit, amountOfOneDigit);
+    balancedString += concatString(otherDigit, remainder);
+  }
+
+  return balancedString;
 };
 
 const setQuestionAndAnswer = () => {
-  const question = String(randomNumber(10, 9999));
+  const question = randomNumber(10, 9999);
 
-  const rightAnswer = getBalancedNumber(getPreBalancedNumber(question));
+  const rightAnswer = getBalancedNumber(question);
 
   return cons(question, rightAnswer);
 };
