@@ -4,20 +4,15 @@
 
 [![Build Status](https://travis-ci.org/sergkul/project-lvl1-s328.svg?branch=master)](https://travis-ci.org/sergkul/project-lvl1-s328)
 
-Step 4 solution:
-https://asciinema.org/a/vzeaxTjJ2cNyPrDT42QbB2T6r
 
-Step 5 solution:
-https://asciinema.org/a/Ib0dx8zfZ25KMPdaC1ER5gy5Y
+[Step 4 solution](https://asciinema.org/a/vzeaxTjJ2cNyPrDT42QbB2T6r)
 
-Step 6 solution:
-https://asciinema.org/a/elccPNeKI2nTNiDhovtc0OtmA
+[Step 5 solution](https://asciinema.org/a/Ib0dx8zfZ25KMPdaC1ER5gy5Y)
 
-Step 7 solution:
-https://asciinema.org/a/dnP59AixZ11KCySpbzsdAyMEy
+[Step 6 solution](https://asciinema.org/a/elccPNeKI2nTNiDhovtc0OtmA)
 
-Step 8 solution:
-https://asciinema.org/a/dEOXeB9JIUUigxRzcqfOZr1Oc
+[Step 7 solution](https://asciinema.org/a/dnP59AixZ11KCySpbzsdAyMEy)
 
-Step 9 solution:
-https://asciinema.org/a/gnC8sZiJqrCPvhE88j86quKOq
+[Step 8 solution](https://asciinema.org/a/dEOXeB9JIUUigxRzcqfOZr1Oc)
+
+[Step 9 solution](https://asciinema.org/a/gnC8sZiJqrCPvhE88j86quKOq)
