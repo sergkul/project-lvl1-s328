@@ -1,18 +1,8 @@
 import { cons } from 'hexlet-pairs';
-import randomNumber from '../utils';
+import { randomNumber, concatString } from '../utils';
 import game from '..';
 
-const rules = 'Balance the given number.';
-
-const concatString = (num, amount) => {
-  let result = '';
-
-  for (let i = 0; i < amount; i += 1) {
-    result += String(num);
-  }
-
-  return result;
-};
+const description = 'Balance the given number.';
 
 const getBalancedNumber = (number) => {
   const str = String(number);
@@ -48,6 +38,6 @@ const setQuestionAndAnswer = () => {
   return cons(question, rightAnswer);
 };
 
-const brainGameBalance = () => game(rules, setQuestionAndAnswer);
+const brainGameBalance = () => game(description, setQuestionAndAnswer);
 
 export default brainGameBalance;

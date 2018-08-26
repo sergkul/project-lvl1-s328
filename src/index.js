@@ -24,9 +24,9 @@ const playRounds = (getQuestionAndAnswer) => {
   return true;
 };
 
-const game = (rules, getQuestionAndAnswer) => {
+const game = (description, getQuestionAndAnswer) => {
   console.log('Welcome to the Brain Games!');
-  console.log(`${rules}\n`);
+  console.log(`${description}\n`);
 
   const username = readlineSync.question('May I have your name? ');
   console.log(`Hello, ${username}!\n`);

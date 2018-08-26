@@ -2,7 +2,7 @@ import { cons } from 'hexlet-pairs';
 import randomNumber from '../utils';
 import game from '..';
 
-const rules = 'What is the result of the expression?';
+const description = 'What is the result of the expression?';
 
 const operationsAmount = 3;
 
@@ -33,6 +33,6 @@ const setQuestionAndAnswer = () => {
   return cons(question, rightAnswer);
 };
 
-const brainGameCalc = () => game(rules, setQuestionAndAnswer);
+const brainGameCalc = () => game(description, setQuestionAndAnswer);
 
 export default brainGameCalc;

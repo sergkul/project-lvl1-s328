@@ -2,7 +2,7 @@ import { cons } from 'hexlet-pairs';
 import randomNumber from '../utils';
 import game from '..';
 
-const rules = 'Find the greatest common divisor of given numbers.';
+const description = 'Find the greatest common divisor of given numbers.';
 
 const getGcd = (a, b) => {
   let gcd = 1;
@@ -27,6 +27,6 @@ const setQuestionAndAnswer = () => {
   return cons(question, rightAnswer);
 };
 
-const brainGameGcd = () => game(rules, setQuestionAndAnswer);
+const brainGameGcd = () => game(description, setQuestionAndAnswer);
 
 export default brainGameGcd;
