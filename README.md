@@ -15,3 +15,6 @@ https://asciinema.org/a/elccPNeKI2nTNiDhovtc0OtmA
 
 Step 7 solution:
 https://asciinema.org/a/dnP59AixZ11KCySpbzsdAyMEy
+
+Step 8 solution:
+https://asciinema.org/a/dEOXeB9JIUUigxRzcqfOZr1Oc
