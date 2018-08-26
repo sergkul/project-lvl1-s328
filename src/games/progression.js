@@ -3,9 +3,9 @@ import { randomNumber } from '../utils';
 import game from '..';
 
 const description = 'What number is missing in this progression?';
+const progressionLength = 10;
 
 const setQuestionAndAnswer = () => {
-  const progressionLength = 10;
   const firstElement = randomNumber(1, 99);
   const step = randomNumber(1, 10);
   const guessedNumberIndex = randomNumber(1, progressionLength);

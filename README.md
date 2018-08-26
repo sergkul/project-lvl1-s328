@@ -18,3 +18,6 @@ https://asciinema.org/a/dnP59AixZ11KCySpbzsdAyMEy
 
 Step 8 solution:
 https://asciinema.org/a/dEOXeB9JIUUigxRzcqfOZr1Oc
+
+Step 9 solution:
+https://asciinema.org/a/gnC8sZiJqrCPvhE88j86quKOq
